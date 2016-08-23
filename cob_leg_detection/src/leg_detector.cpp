@@ -696,6 +696,7 @@ public:
 		//cob_perception_msgs::PositionMeasurementArray array;
 		cob_perception_msgs::People array;
 		array.header.stamp = ros::Time::now();
+		array.header.frame_id = fixed_frame;
 		array.people = people;
 		people_pub_.publish(array);
 	}
